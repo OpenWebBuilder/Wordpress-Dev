@@ -1,0 +1,9 @@
+---
+- hosts: local
+  vars:
+    somevar: "value"
+    source: "package"
+
+  roles:
+  - hello
+  - world
