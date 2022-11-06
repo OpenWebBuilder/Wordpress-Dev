@@ -14,7 +14,7 @@ wordpress_db=wpdb
 wordpress_db_user=wpdbuser
 wordpress_db_pass=12345dd
 
-cd $wordpress
+cd $wordpress_home
 wp config create --dbname=$wordpress_db --dbuser=$wordpress_db_user --dbpass=$wordpress_db_pass --extra-php <<PHP
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
