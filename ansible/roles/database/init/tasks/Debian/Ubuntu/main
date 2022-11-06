@@ -4,4 +4,11 @@
   become: true
   ansible.builtin.apt:
     pkg:
-    - python-pymysql
+    - python3-pymysql
+
+- name: Start MariaDB
+  become: true
+  ansible.builtin.service:
+    name: mysql
+    state: started
+    enabled: yes
