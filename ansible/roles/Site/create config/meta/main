@@ -1,0 +1,4 @@
+---
+dependencies:
+- Site/default
+- database/Wordpress

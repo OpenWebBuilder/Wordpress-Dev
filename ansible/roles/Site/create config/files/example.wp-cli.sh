@@ -1,13 +1,5 @@
 ---
 
-url=example.com
-site_title="1PR Brands"
-password="adminpass"
-email="admin@1prbrands.local"
-
-wp core install --url=$url --title=$site_title --admin_password=$password --admin_email=$email --skip-email
-
-
 create_config(){
 wordpress_home=/var/www/wordpress/
 wordpress_db=wpdb
@@ -19,4 +11,13 @@ wp config create --dbname=$wordpress_db --dbuser=$wordpress_db_user --dbpass=$wo
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 PHP
+}
+
+install_site(){
+  url=example.com
+  site_title="1PR Brands"
+  password="adminpass"
+  email="admin@1prbrands.local"
+
+  wp core install --url=$url --title=$site_title --admin_password=$password --admin_email=$email --skip-email
 }

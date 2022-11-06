@@ -1,6 +1,5 @@
 ---
 
-dest: /var/wordpress
 to: "/usr/local/bin/wp"
 
 download_url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"

@@ -1,11 +1,15 @@
 ---
-- hosts: local
-  vars:
-    database: "MariaDB"
-    # website_url: mysite.local
+# - hosts: local
+#   vars:
+#     database: "MariaDB"
+#     # website_url: mysite.local
+#
+#   roles:
+#   - in WSL/default
+#   - database/init
+#   - Wordpress/init
+#   - WP-CLI/install
 
+- hosts: local
   roles:
-  - in WSL/default
-  - database/init
-  - Wordpress/init
-  - WP-CLI/install
+  - Site/create config

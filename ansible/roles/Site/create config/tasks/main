@@ -1,0 +1,7 @@
+---
+
+- name: Create wp-config.php
+  ansible.builtin.command: "wp config create --dbname={{wordpress_db}} --dbuser={{wordpress_db_user}} --dbpass={{wordpress_db_pass}}"
+  args:
+    chdir: 
+    creates: /path/to/database
