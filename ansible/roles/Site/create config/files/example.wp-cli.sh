@@ -15,9 +15,9 @@ PHP
 
 install_site(){
   url=example.com
-  site_title="1PR Brands"
-  password="adminpass"
-  email="admin@1prbrands.local"
+  site_title="my Dev Site"
+  password="admin"
+  email="admin@example.com"
 
   wp core install --url=$url --title=$site_title --admin_password=$password --admin_email=$email --skip-email
 }

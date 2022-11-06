@@ -1,0 +1,10 @@
+---
+
+- debug:
+    msg: "wp home: {{wordpress_home}}"
+
+- name: Install Site with wp-cli
+  command: "wp core install --url={{dev_url}} --title={{dev_site_title}} --admin_password={{dev_admin_password}} --admin_email={{dev_admin_email}} --skip-email"
+  args:
+    chdir: "{{wordpress_home}}"
+    creates: "{{wordpress_home}}/wp-config.php"

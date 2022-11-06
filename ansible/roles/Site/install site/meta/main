@@ -1,3 +1,5 @@
 ---
 dependencies:
 - default/database
+- default/path
+- default/site

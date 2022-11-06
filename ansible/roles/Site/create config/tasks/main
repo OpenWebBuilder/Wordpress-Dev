@@ -1,7 +1,10 @@
 ---
 
+- debug:
+    msg: "wp home: {{wordpress_home}}"
+
 - name: Create wp-config.php
-  ansible.builtin.command: "wp config create --dbname={{wordpress_db}} --dbuser={{wordpress_db_user}} --dbpass={{wordpress_db_pass}}"
+  command: "wp config create --dbname={{wordpress_db}} --dbuser={{wordpress_db_user}} --dbpass={{wordpress_db_pass}}"
   args:
     chdir: "{{wordpress_home}}"
     creates: "{{wordpress_home}}/wp-config.php"

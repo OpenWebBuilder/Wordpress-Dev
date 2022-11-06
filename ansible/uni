@@ -13,4 +13,4 @@
 - hosts: local
   tags: create
   roles:
-  - Site/create config
+  - Site/new
