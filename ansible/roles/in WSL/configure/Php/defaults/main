@@ -1,0 +1,6 @@
+---
+
+memory_limit: 256M
+upload_max_filesize: 1G
+max_execution_time: 360
+date_timezone: America/Chicago

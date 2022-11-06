@@ -1,0 +1,57 @@
+---
+
+- name: file_uploads = On
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^file_uploads ='
+    line: file_uploads = On
+
+- name: allow_url_fopen = On
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^allow_url_fopen ='
+    line: allow_url_fopen = On
+
+- name: short_open_tag = On
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^short_open_tag ='
+    line: short_open_tag = On
+
+- name: memory_limit
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^memory_limit ='
+    line: "memory_limit = {{memory_limit}}"
+
+- name: cgi.fix_pathinfo = 0
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^cgi.fix_pathinfo ='
+    line: cgi.fix_pathinfo = 0
+
+- name: upload_max_filesize
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^upload_max_filesize = '
+    line: "upload_max_filesize = {{upload_max_filesize}}"
+
+- name: max_execution_time =
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^max_execution_time ='
+    line: "max_execution_time = {{max_execution_time}}"
+
+- name: date.timezone
+  become: true
+  ansible.builtin.lineinfile:
+    path: "{{phpini}}"
+    regexp: '^;date.timezone ='
+    line: "date.timezone = {{date_timezone}}"

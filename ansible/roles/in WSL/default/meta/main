@@ -1,5 +1,8 @@
 ---
 dependencies:
-- in WSL/{{database}}
-- in WSL/Nginx
+# Install
+# - in WSL/{{database}}
+# - in WSL/Nginx
 - in WSL/Php
+# Configure
+- in WSL/configure/Php
