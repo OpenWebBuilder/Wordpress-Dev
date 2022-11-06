@@ -1,4 +1,4 @@
 ---
 dependencies:
-- Wordpress/download
+- Wordpress/get Wordpress
 - Wordpress/Nginx server

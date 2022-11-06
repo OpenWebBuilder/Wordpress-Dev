@@ -1,0 +1,9 @@
+---
+- name: Get stats of the FS object
+  ansible.builtin.stat:
+    path: /var/www/wordpress/index.php
+  register: wordpress_install
+
+- name: get Wordpress
+  include_tasks: "{{default_install_method}} Wordpress"
+  when: not (wordpress_install.stat.isreg is defined and wordpress_install.stat.isreg)

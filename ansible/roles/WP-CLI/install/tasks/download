@@ -5,11 +5,12 @@
   ansible.builtin.get_url:
     url: "{{download_url}}"
     dest: "{{dest}}"
-    mode: '0740'
+    mode: '0755'
 
-- name: Copy to path/wp
+- name: Copy wp-cli to path
   become: true
   ansible.builtin.copy:
-    src: "{{dest/wp-cli.phar}}"
+    src: "{{dest}}/wp-cli.phar"
     dest: "{{to}}"
     remote_src: yes
+    mode: '0755'
