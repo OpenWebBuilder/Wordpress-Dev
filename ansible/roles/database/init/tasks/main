@@ -4,33 +4,21 @@
   include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
 
 
-- name: update mysql root password for all root accounts
-  mysql_user:
-    name: root
-    host: "{{ item }}"
-    password: "{{ mysql_root_password }}"
-    login_user: root
-    login_password: "{{ mysql_root_password }}"
-    check_implicit_admin: yes
-    priv: "*.*:ALL,GRANT"
-  with_items:
-    - "{{ ansible_hostname }}"
-    - 127.0.0.1
-    - ::1
-    - localhost
+# - name: Create user with password, all database privileges and 'WITH GRANT OPTION' in db1 and db2
+#   mysql_user:
+#     state: present
+#     name: bob
+#     password: 12345dd
 
-- name: create a new database
-  mysql_db:
-    name: wpdb
-    state: present
-    login_user: root
-    login_password: "{{ mysql_root_password }}"
+- include_tasks: change password
 
-# - name: add sample data to database
-#   copy:
-#     src: dump.sql
-#     dest: /tmp/dump.sql
 
-# - name: insert sample data into database
+# - name: Create new databases with names 'foo' and 'bar'
+#   become: true
 #   mysql_db:
-#     name: testdb state=import target=/tmp/dump.sql login_user=root login_password="{{ mysql_root_password }}"
+#     name:
+#       - foo
+#       - bar
+#     state: present
+
+# sudo mysql -u root

@@ -1,9 +1,11 @@
 ---
 
-- name: Install pymysql
+- name: Install Client
   become: true
   ansible.builtin.apt:
     pkg:
+    # - mysql-client
+    - mariadb-client
     - python3-pymysql
 
 - name: Start MariaDB
