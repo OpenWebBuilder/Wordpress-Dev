@@ -4,3 +4,9 @@
     pkg:
     - nginx
   become: true
+
+- name: Start Nginx
+  become: true
+  ansible.builtin.service:
+    name: nginx
+    state: started

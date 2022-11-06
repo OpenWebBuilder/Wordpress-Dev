@@ -7,46 +7,54 @@
       path: "{{phpini}}"
       regexp: '^file_uploads ='
       line: file_uploads = On
+    notify: Restart Php
 
   - name: allow_url_fopen = On
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^allow_url_fopen ='
       line: allow_url_fopen = On
+    notify: Restart Php
 
   - name: short_open_tag = On
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^short_open_tag ='
       line: short_open_tag = On
+    notify: Restart Php
 
   - name: memory_limit
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^memory_limit ='
       line: "memory_limit = {{memory_limit}}"
+    notify: Restart Php
 
   - name: cgi.fix_pathinfo = 0
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^cgi.fix_pathinfo ='
       line: cgi.fix_pathinfo = 0
+    notify: Restart Php
 
   - name: upload_max_filesize
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^upload_max_filesize = '
       line: "upload_max_filesize = {{upload_max_filesize}}"
+    notify: Restart Php
 
   - name: max_execution_time =
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^max_execution_time ='
       line: "max_execution_time = {{max_execution_time}}"
+    notify: Restart Php
 
   - name: date.timezone
     ansible.builtin.lineinfile:
       path: "{{phpini}}"
       regexp: '^;date.timezone ='
       line: "date.timezone = {{date_timezone}}"
+    notify: Restart Php
   become: true

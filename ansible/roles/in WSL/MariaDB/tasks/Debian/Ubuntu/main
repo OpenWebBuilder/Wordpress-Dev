@@ -5,3 +5,10 @@
     - mariadb-server
     - mariadb-client
   become: true
+
+
+- name: Start MariaDB
+  become: true
+  ansible.builtin.service:
+    name: mysql
+    state: started
