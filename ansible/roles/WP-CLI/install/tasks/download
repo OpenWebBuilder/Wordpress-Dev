@@ -1,0 +1,8 @@
+---
+
+- name: Download WP-CLI
+  become: true
+  ansible.builtin.get_url:
+    url: "{{download_url}}"
+    dest: "{{to}}"
+    mode: '0740'

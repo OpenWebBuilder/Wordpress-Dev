@@ -5,6 +5,7 @@
     # website_url: mysite.local
 
   roles:
-  # - in WSL/default
+  - in WSL/default
   - database/init
   - Wordpress/init
+  - WP-CLI/install

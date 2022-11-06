@@ -1,0 +1,7 @@
+---
+- name: download WP-CLI
+  include_tasks: download
+  when: install_method == "download"
+
+
+# https://wp-cli.org/
