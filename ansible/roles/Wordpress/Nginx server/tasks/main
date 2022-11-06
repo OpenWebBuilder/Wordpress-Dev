@@ -10,6 +10,6 @@
 - name: Create a symbolic link
   ansible.builtin.file:
     src: /etc/nginx/sites-available/wordpress
-    dest: /etc/nginx/sites-enabled/
+    dest: /etc/nginx/sites-enabled/wordpress
     state: link
   notify: Restart Nginx

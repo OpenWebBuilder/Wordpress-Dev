@@ -1,10 +1,12 @@
 ---
-- name: scratch directory
+- name: Wordpress directory
   become: true
   file:
-    path: /var/wordpress
+    path: "{{item}}"
     state: directory
-
+  with_items:
+    - /var/wordpress
+    - /var/www
 
 - name: Download Wordpress .tar.gz
   become: true
@@ -16,7 +18,7 @@
   become: true
   ansible.builtin.unarchive:
     src:  /var/wordpress/latest.tar.gz
-    dest: /var/www/wordpress
+    dest: /var/www/
     remote_src: yes
 
 - name: www directory permissions
