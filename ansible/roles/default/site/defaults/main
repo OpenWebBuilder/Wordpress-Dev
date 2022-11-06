@@ -1,5 +1,6 @@
 ---
 dev_url: example.com
 dev_site_title: "my Dev Site"
+dev_admin_user: "root"
 dev_admin_password: "admin"
-dev_admin_email: "admin@example.com"
+dev_admin_email: "root@example.com"

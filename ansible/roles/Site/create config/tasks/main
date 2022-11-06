@@ -1,8 +1,5 @@
 ---
 
-- debug:
-    msg: "wp home: {{wordpress_home}}"
-
 - name: Create wp-config.php
   command: "wp config create --dbname={{wordpress_db}} --dbuser={{wordpress_db_user}} --dbpass={{wordpress_db_pass}}"
   args:
