@@ -13,12 +13,12 @@
 - include_tasks: change password
 
 
-# - name: Create new databases with names 'foo' and 'bar'
-#   become: true
-#   mysql_db:
-#     name:
-#       - foo
-#       - bar
-#     state: present
+- name: Create new databases with names 'foo' and 'bar'
+  become: true
+  mysql_db:
+    name:
+      - foo
+      - bar
+    state: present
 
 # sudo mysql -u root
