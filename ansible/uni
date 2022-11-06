@@ -4,4 +4,5 @@
     database: "MariaDB"
 
   roles:
-  - in WSL/default
+  # - in WSL/default
+  - database/init
