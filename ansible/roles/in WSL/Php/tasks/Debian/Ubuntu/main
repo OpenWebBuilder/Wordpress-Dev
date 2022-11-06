@@ -15,3 +15,10 @@
     - php-cli
     - php-zip
   become: true
+
+- name: Start Php
+  become: true
+  ansible.builtin.service:
+    name: "php{{php_version}}-fpm"
+    state: started
+    enabled: yes
