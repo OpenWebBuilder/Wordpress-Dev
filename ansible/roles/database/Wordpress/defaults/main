@@ -1,0 +1,4 @@
+---
+wordpress_db: wpdb
+wordpress_db_user: wpdbuser
+wordpress_db_pass: 12345dd
