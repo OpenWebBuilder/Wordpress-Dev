@@ -1,0 +1,5 @@
+---
+
+dest: /var/wordpress
+web_server_home: /var/www
+wordpress_home: "{{web_server_home}}/wordpress"

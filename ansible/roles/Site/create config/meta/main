@@ -1,4 +1,4 @@
 ---
 dependencies:
-- Site/default
+- default/path
 - database/Wordpress
