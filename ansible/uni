@@ -2,7 +2,9 @@
 - hosts: local
   vars:
     database: "MariaDB"
+    website_url: mysite.local
 
   roles:
   # - in WSL/default
   - database/init
+  - Wordpress/init

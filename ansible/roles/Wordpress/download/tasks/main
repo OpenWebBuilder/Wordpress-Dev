@@ -1,0 +1,27 @@
+---
+- name: scratch directory
+  become: true
+  file: /var/wordpress
+    state: directory
+
+
+- name: Download Wordpress .tar.gz
+  become: true
+  ansible.builtin.get_url:
+    url: https://wordpress.org/latest.tar.gz
+    dest: /var/wordpress/latest.tar.gz
+
+- name: Unarchive Wordpress
+  become: true
+  ansible.builtin.unarchive:
+    src:  /var/wordpress/latest.tar.gz
+    dest: /var/www/wordpress
+    remote_src: yes
+
+- name: www directory permissions
+  become: true
+  file: /var/www/wordpress
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
