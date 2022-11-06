@@ -1,9 +1,7 @@
 ---
 - hosts: local
   vars:
-    somevar: "value"
-    source: "package"
+    database: "MariaDB"
 
   roles:
-  - hello
-  - world
+  - in WSL/default

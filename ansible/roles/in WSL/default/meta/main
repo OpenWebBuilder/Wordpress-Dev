@@ -1,0 +1,5 @@
+---
+dependencies:
+- in WSL/{{database}}
+- in WSL/Nginx
+- in WSL/Php
