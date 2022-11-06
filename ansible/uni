@@ -2,7 +2,7 @@
 - hosts: local
   vars:
     database: "MariaDB"
-    website_url: mysite.local
+    # website_url: mysite.local
 
   roles:
   # - in WSL/default

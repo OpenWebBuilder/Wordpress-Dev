@@ -1,7 +1,8 @@
 ---
 - name: scratch directory
   become: true
-  file: /var/wordpress
+  file:
+    path: /var/wordpress
     state: directory
 
 
@@ -20,7 +21,8 @@
 
 - name: www directory permissions
   become: true
-  file: /var/www/wordpress
+  file:
+    path: /var/www/wordpress
     state: directory
     owner: www-data
     group: www-data
