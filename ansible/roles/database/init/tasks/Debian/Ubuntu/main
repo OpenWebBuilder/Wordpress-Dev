@@ -1,0 +1,7 @@
+---
+
+- name: Install pymysql
+  become: true
+  ansible.builtin.apt:
+    pkg:
+    - python-pymysql
