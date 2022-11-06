@@ -29,3 +29,6 @@
     owner: www-data
     group: www-data
     mode: '0755'
+    owner: "{{ansible_user}}"
+    group: "{{ansible_user}}"
+    recursive: yes
