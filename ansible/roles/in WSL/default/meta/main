@@ -6,3 +6,4 @@ dependencies:
 - in WSL/Php
 # Configure
 - in WSL/configure/Php
+- in WSL/autostart

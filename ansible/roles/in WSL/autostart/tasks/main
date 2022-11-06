@@ -11,7 +11,7 @@
     dest: "/home/{{ansible_user}}/bin/{{item}}"
     owner: "{{ansible_user}}"
     group: "{{ansible_user}}"
-    mode: '0774'
+    mode: '0755'
   with_items:
     - start_wordpress
     - stop_wordpress
