@@ -16,5 +16,6 @@
   mysql_user:
     name: "{{wordpress_db_user}}"
     password: "{{wordpress_db_pass}}"
-    priv: "'{{wordpress_db}}.*': 'ALL,GRANT'"
     state: present
+    # priv: '*.*:ALL,GRANT'
+    priv: '{{wordpress_db}}.*:ALL,GRANT'
