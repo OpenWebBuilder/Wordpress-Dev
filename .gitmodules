@@ -1,6 +1,0 @@
-[submodule "src/Vagrant.AI"]
-	path = src/Vagrant.AI
-	url = https://github.com/OpenWebBuilder/Vagrant.AI.git
-[submodule "src/SSH-Key-Manager"]
-	path = src/SSH-Key-Manager
-	url = https://github.com/OpenWebBuilder/SSH-Key-Manager.git
